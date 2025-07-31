@@ -1,12 +1,18 @@
 
 
 const IngredientList = (props) => {
+  
+  
+    const handleClick = (ingredient) => {
+    props.addToBurger(ingredient);
+    };
+  
+  
   return <ul>
-
 
       {props.ingredients.map((ingredient, index)=>(
           <li key={index} style={{ backgroundColor: ingredient.color}}>{ingredient.name}
-           <button onClick={() => props.addToBurger(ingredient)}>  +  </button>
+           <button onClick={() => handleClick(ingredient)}>  +  </button>
           </li>
      
          

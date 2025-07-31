@@ -7,7 +7,8 @@
       ) : (
         stack.map((ingredient, index) => (
           <li style={{ backgroundColor: ingredient.color}} key={index}>
-            <button onClick={() => removeFromBurger(index)}>
+            {/* طريقه مختصره عن handleremove */}
+            <button onClick={() => removeFromBurger(index)}>  
               {ingredient.name} ❌
             </button>
           </li>
